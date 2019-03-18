@@ -46,24 +46,41 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(":domain")
 
     implementation deps.room.runtime
     implementation deps.kotlin.kotlin_jre
     implementation deps.kotlin.coroutines_core
     implementation deps.kotlin.coroutines_android
+    implementation deps.kotlin.rx2
     kapt deps.room.compiler
     implementation deps.dagger.core
     implementation deps.dagger.support
     kapt deps.dagger.kaptCompiler
     kapt deps.dagger.kaptProcessor
-   implementation deps.rxJava.core
+    implementation deps.rxJava.core
     implementation deps.rxJava.rxKotlin
     implementation deps.rxJava.rxAndroid
     implementation deps.room.rxJava
-//    implementation deps.room.coroutines
+    implementation  'javax.inject:javax.inject:1'
+    api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    releaseApi 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+    debugApi 'com.readystatesoftware.chuck:library:1.1.0'
+
+    implementation deps.retrofit.core
+    implementation deps.retrofit.okhttp
+    implementation deps.retrofit.gson
+    implementation deps.retrofit.gson_retrofit
+    implementation deps.retrofit.okhttp3
+    implementation deps.retrofit.logging
+    implementation deps.retrofit.scalar_converter
+    implementation deps.android.compressor
+
     testImplementation deps.room.testing
     testImplementation deps.test.junit
     testImplementation deps.test.mockk
     testImplementation deps.test.kotlin_junit
+    androidTestImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 }

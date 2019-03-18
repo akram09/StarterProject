@@ -8,11 +8,11 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import android.net.ConnectivityManager
 import androidx.annotation.StringRes
+import androidx.core.content.ContextCompat.getSystemService
 import oxxy.kero.roiaculte.team7.starterproject.utils.extension.networkInfo
 
 
 abstract class BaseActivity : DaggerAppCompatActivity() {
-
     fun showSnackBar(message: String) {
         val snackbar = Snackbar.make(
             findViewById(android.R.id.content),

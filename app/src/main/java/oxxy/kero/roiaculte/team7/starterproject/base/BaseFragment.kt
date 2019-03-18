@@ -10,9 +10,7 @@ import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
 open class BaseFragment :DaggerFragment(){
-
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
+    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
 
     protected var mActivity: BaseActivity? = null
 
