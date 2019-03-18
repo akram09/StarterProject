@@ -5,7 +5,7 @@ sealed class Failure {
     class NetworkConnection: Failure()
     class ServerError: Failure()
 
-    class DataBaseError(t:Throwable):Failure()
+    class DataBaseError(val  t:Throwable):Failure()
     /** * Extend this class for feature specific failures.*/
     abstract class FeatureFailure: Failure()
 

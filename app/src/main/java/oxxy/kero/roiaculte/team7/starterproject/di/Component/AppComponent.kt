@@ -4,9 +4,9 @@ import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 import oxxy.kero.roiaculte.team7.starterproject.AndroidApplication
-import oxxy.kero.roiaculte.team7.starterproject.Ui.feature.FeatureBuilder
-import oxxy.kero.roiaculte.team7.starterproject.Ui.feature.FeatureModule
+import oxxy.kero.roiaculte.team7.starterproject.Ui.ActivitysBuilder
 import oxxy.kero.roiaculte.team7.starterproject.di.Module.AppModule
+import oxxy.kero.roiaculte.team7.starterproject.di.viewmodel.ViewModelModule
 import javax.inject.Singleton
 
 /**
@@ -25,8 +25,9 @@ import javax.inject.Singleton
  * */
 @Singleton
 @Component(modules = [AndroidInjectionModule::class,
-                       FeatureBuilder::class,
-                        AppModule::class])
+                       ActivitysBuilder::class,
+                        AppModule::class,
+                        ViewModelModule::class])
 interface AppComponent : AndroidInjector<AndroidApplication> {
     @Component.Builder
     abstract class Builder: AndroidInjector.Builder<AndroidApplication>()

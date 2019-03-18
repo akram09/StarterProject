@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">StarterProject</string>
+    <string name="some_error">an error occurred</string>
 </resources>

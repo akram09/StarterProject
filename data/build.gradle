@@ -61,7 +61,7 @@ dependencies {
     implementation deps.rxJava.rxKotlin
     implementation deps.rxJava.rxAndroid
     implementation deps.room.rxJava
-    implementation deps.room.coroutines
+//    implementation deps.room.coroutines
     testImplementation deps.room.testing
     testImplementation deps.test.junit
     testImplementation deps.test.mockk

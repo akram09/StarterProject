@@ -45,10 +45,10 @@ dependencies {
     //Dependencies
     implementation deps.android.constraint_layout
     implementation deps.android.lifecycle_extensions
-    implementation deps.android.ktx_fragment
     implementation deps.android.fragment
     implementation deps.android.appcompat
     implementation deps.android.recyclerview
+    implementation deps.android.card_view
     implementation deps.android.design
     implementation deps.dagger.core
     implementation deps.dagger.support
